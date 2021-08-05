@@ -1,23 +1,37 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { NavigationContainer } from '@react-navigation/native';
-import Ingredients from './IngredientsComponent';
-
-import AboutUs from './AboutComponent';
+// import React, { Component } from 'react';
+// import { View, Text } from 'react-native';
+// import { AccordionData } from '../shared/AccordionData';
+// import TopBarNavigator from '../navigators/TopBarNavigator';
+// import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
-const Tab = createMaterialTopTabNavigator();
 
-function Main() {
-    return (
-        <NavigationContainer>
-            <Tab.Navigator>
-                <Tab.Screen name="Ingredients" component={Ingredients} />
-                <Tab.Screen name="About Us" component={AboutUs} />
-            </Tab.Navigator>
-        </NavigationContainer>
-    );
-}
+// class Main extends Component {
 
-export default Main; 
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             ingredients: AccordionData,
+//             selectedIngredient: null,
+//             selectedProduct: null
+//         }
+//     }
+
+//     onIngredientSelect(ingredientId) {
+//         this.setState({selectedIngredient: ingredientId})
+//     }
+
+//     onProductSelect(productId) {
+//         this.setState({selectedProduct: productId})
+//     }
+
+//     render() {
+//        return(
+//             <SafeAreaProvider>
+//                 <TopBarNavigator />
+//             </SafeAreaProvider>
+//        )
+//     }
+// }
+
+// export default Main; 
