@@ -5,9 +5,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from '../components/2HomeComponent';
 import AboutUs from '../components/AboutComponent';
 import IngredientsDirectory from '../components/IngredientsDirectory';
+import Menu from '../components/MenuComponent';
+import Contact from '../components/ContactComponent';
 import { Rokkitt_100Thin } from '@expo-google-fonts/rokkitt';
 import { TabBarIndicator } from 'react-native-tab-view';
 import { useFonts } from '@expo-google-fonts/rokkitt';
+import { View, Text } from 'react-native';
 
 
 
@@ -34,12 +37,17 @@ function MyTabs() {
             }}
             screenOptions={{
                 tabBarIndicatorStyle: { backgroundColor: '#1af5c3' },
-              }}
+            }}
         >
             <Tab.Screen
                 name="Home"
                 component={Home}
                 options={{ tabBarLabel: 'Home' }}
+            />
+            <Tab.Screen
+                name="Menu"
+                component={Menu}
+                options={{ tabBarLabel: 'Menu' }}
             />
             <Tab.Screen
                 name="Ingredients"
@@ -50,6 +58,11 @@ function MyTabs() {
                 name="About"
                 component={AboutUs}
                 options={{ tabBarLabel: 'About' }}
+            />
+             <Tab.Screen
+                name="Contact"
+                component={Contact}
+                options={{ tabBarLabel: 'Contact' }}
             />
         </Tab.Navigator>
     );

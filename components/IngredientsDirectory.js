@@ -1,12 +1,15 @@
 import React, { Component, useState } from 'react';
-import { FlatList, View, Text, StyleSheet, StatusBar, TouchableOpacity, LayoutAnimation } from 'react-native';
+import { FlatList, View, Text, StyleSheet, StatusBar, Button, TouchableOpacity, LayoutAnimation, Alert } from 'react-native';
 import { AccordionData } from '../shared/AccordionData';
 import { List } from 'react-native-paper';
 import { Accordion } from 'react-native-paper';
 import { Transitioning, Transition } from 'react-native-reanimated';
 import Constants from 'expo-constants';
 import { UIManager } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+
 
 
 const transition = (
@@ -25,67 +28,65 @@ const transition = (
     </Transition.Together>
   );
 
+  
+  
 function RenderAccordion(props) {
     const ref = React.useRef();
     const [selectedColor, setSelectedColor] = React.useState('');
     const [selectedItem, setSelectedItem] = React.useState('');
     const {ingredients} = props;
-    
-    const toggleIngredient = (product => product.id === selectedItem ? setSelectedItem : null);
 
+  
         return (
-        <Transitioning.View
-            ref={ref}
-            transition={transition}
-            style={styles.container}>
-            <StatusBar hidden/>
-            {ingredients.map(({ bg, color, type, products }, index) => {
-            return (
-                <TouchableOpacity
-                    key={type}
-                    activeOpacity={.7}
-                    onPress={() => {
-                        ref.current.animateNextTransition();
-                        setSelectedItem(products.type === selectedItem ? products.type : null);
-                    }}
-                    style={styles.cardContainer}>
-                    <View
-                        style={[styles.card, { backgroundColor: bg }]}>
-                        <Text style={[styles.type, { color }]}>{type}</Text>
-                        {selectedColor === bg && (
-                        <View style={{ marginTop: 20 }}>
-                            {products.map(product => (
-                                <Text 
-                                    key={id}
-                                    style={styles.text} 
-                                >      
-                                {product.name}
-                                </Text>
-                            ))}
-                            {/* {selectedItem === product.id && (
-                                <View>
-                                    {products.map(({ ingred, id, contains, maycontain }) => (
-                                        <Text   
-                                            key={id}
-                                            style={styles.text}>
-                                                {product.name}
-                                                {product.ingred}
-                                                {product.contains}
-                                                {product.maycontain}
-                                        </Text>
-                                    ))}
-                                </View>
-                            )} */}
+          
+            <Transitioning.View
+                ref={ref}
+                transition={transition}
+                style={styles.container}>
+                <StatusBar hidden/>
+                {ingredients.map(({ bg, color, type, products, id }, index) => {
+                return (
+                    <TouchableOpacity
+                        key={type}
+                        activeOpacity={.7}
+                        onPress={() => {
+                            ref.current.animateNextTransition();
+                            // setSelectedItem(products.type === selectedItem ? products.type : null);
+                            setSelectedColor(bg === selectedColor ? '' : bg);
+                        }}
+                        style={styles.cardContainer}>
+                        <View
+                            style={[styles.card, { backgroundColor: bg }]}>
+                            <Text style={[styles.type, { color }]}>{type}</Text>
+                            {selectedColor === bg && (
+                            <View style={{ marginTop: 10 }}>
+                                {products.map(product => (
+                                  <TouchableOpacity>
+                                    <Text
+                                      style={styles.text}
+                                      key={id}
+                                      onPress={() => 
+                                       Alert.alert(
+                                         `${product.name}`,
+                                         `${product.ingred}`, 
+                                       )}>
+                                    {product.name}
+                                    </Text>
+                                  </TouchableOpacity>
+                                ))}
+                            </View> 
+                            )}
                         </View>
-                        )}
-                    </View>
-                </TouchableOpacity>
-            );
-        })}
-        </Transitioning.View>
+                        
+
+                    </TouchableOpacity>
+                );
+            })}
+            </Transitioning.View>
+          
         );
 }
-
+  
 
 class IngredientsDirectory extends Component {
         constructor(props) {
@@ -94,6 +95,7 @@ class IngredientsDirectory extends Component {
                 ingredients: AccordionData
             }
         }
+
     render() {
         return (
             <RenderAccordion ingredients={this.state.ingredients} />
@@ -125,7 +127,8 @@ class IngredientsDirectory extends Component {
       fontSize: 42,
       fontWeight: '800',
       textTransform: 'uppercase',
-      letterSpacing: -2
+      letterSpacing: -2,
+      fontFamily: "Rokkitt"
     },
     topic: {
       fontSize: 18,
@@ -133,7 +136,7 @@ class IngredientsDirectory extends Component {
       lineHeight: 18 * 1.5
     },
     text: {
-        fontSize: 16,
+        fontSize: 20,
         textAlign: 'center',
         fontFamily: 'Rokkitt'
 

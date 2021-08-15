@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
-import { View, Image, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet} from 'react-native';
 import { HomePhotos } from '../shared/HomePhotosData';
 import { Card, Title, Paragraph } from 'react-native-paper';
+import { MENU } from '../shared/MenuData';
+
 
 
 
@@ -16,7 +18,6 @@ class Home extends Component {
 
     render() {
         return(
-            
             <View style={styles.container}>
                 <View>
                     <View>
@@ -42,6 +43,7 @@ class Home extends Component {
         );
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {

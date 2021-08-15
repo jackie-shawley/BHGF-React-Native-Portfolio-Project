@@ -1,6 +1,6 @@
 export const AccordionData = [
     {
-        bg: '#1af5c3',
+        bg: 'rgba(26, 245, 195, .25)',
         color: '#000000',
         id: 1,
         type: "Cookies",
@@ -40,7 +40,7 @@ export const AccordionData = [
         ]
     },
     {
-        bg: '#1af5c3',
+        bg: 'rgba(26, 245, 195, .4)',
         color: '#000000',
         id: 2,
         type: "Cake",
@@ -83,7 +83,7 @@ export const AccordionData = [
         ]
     },
     {
-        bg: '#1af5c3',
+        bg: 'rgba(26, 245, 195, .55)',
         color: '#000000',
         id: 3,
         type: "Muffins",
@@ -111,7 +111,7 @@ export const AccordionData = [
     },
 
     {
-        bg: '#1af5c3',
+        bg: 'rgba(26, 245, 195, .7)',
         color: '#000000',
         id: 4,
         type: "Bread",

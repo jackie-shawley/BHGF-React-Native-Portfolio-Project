@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
         textShadowColor: '#1af5c3',
         textShadowOffset: {width: 2, height: 2},
         fontSize: 40,
+        marginTop: 10
     },
     span: {
         fontFamily: 'Rochester',
