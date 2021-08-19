@@ -1,9 +1,10 @@
 import React from 'react';
 import { Component } from 'react';
-import { Linking, Text, StyleSheet, TouchableOpacity, View, Image } from 'react-native';
+import { Linking, Text, StyleSheet, TouchableOpacity, View, Image, Dimensions } from 'react-native';
 import { Divider } from 'react-native-elements';
 import { Card } from 'react-native-paper';
 import * as MailComposer from 'expo-mail-composer';
+import MapView, { Marker } from 'react-native-maps';
 
 
 export default class Contact extends Component {
@@ -21,8 +22,8 @@ export default class Contact extends Component {
     render() {
         return(
             <View style={styles.container}>
-                <Text style={styles.headerText}>Contact Us</Text>
-                <View style={styles.lineContainer}>
+                {/* <Text style={styles.headerText}>Contact Us</Text> */}
+                <View style={[styles.lineContainer, {marginTop: 30}]}>
                     <Divider style={styles.dividerBlack} />
                     <Divider style={styles.dividerAqua} />
                     <Divider style={styles.dividerBlack} />
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     card: {
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgb(26, 245, 195)'
+        backgroundColor: 'rgba(26, 245, 195, .5)'
     },
     title: {
         padding: 20,
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
     },
     button: { 
         backgroundColor: 'white', 
-        margin: 40, 
+        margin: 20, 
         color: 'black',
         width: 200,
         height: 50,

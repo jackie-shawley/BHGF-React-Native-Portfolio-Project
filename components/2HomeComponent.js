@@ -3,7 +3,7 @@ import { View, StyleSheet, FlatList, TouchableOpacity, Text, ScrollView } from '
 import { HomePhotos } from '../shared/HomePhotosData';
 import { Card, Title, Paragraph } from 'react-native-paper';
 import { Image, Tile } from 'react-native-elements';
-import IngredientsDirectory from './IngredientsDirectory';
+
 
 
 

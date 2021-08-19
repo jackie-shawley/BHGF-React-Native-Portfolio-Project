@@ -32,7 +32,7 @@ function MyTabs() {
             initialRouteName='Home'
             tabBarOptions={{
                 activeTintColor: 'black',
-                labelStyle: { fontSize: 14, fontFamily: 'Rokkitt' },
+                labelStyle: { fontSize: 12, fontFamily: 'Rokkitt', width: 80 },
                 style: { backgroundColor: 'rgba(25, 245, 195, .25)', marginTop: insets.top }
             }}
             screenOptions={{

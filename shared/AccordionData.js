@@ -2,7 +2,7 @@ export const AccordionData = [
     {
         bg: 'rgba(26, 245, 195, .25)',
         color: '#000000',
-        id: 1,
+       
         type: "Cookies",
         image: '/assets/images/cookies/plate of drop cookies.jpg',
         products:[ 
@@ -42,7 +42,7 @@ export const AccordionData = [
     {
         bg: 'rgba(26, 245, 195, .4)',
         color: '#000000',
-        id: 2,
+       
         type: "Cake",
         image: '/assets/images/cakes/Gluten-Free-Cake-Double-Chocolate-Capuccino-Cake-385.jpeg',
         products:[ 
@@ -85,7 +85,7 @@ export const AccordionData = [
     {
         bg: 'rgba(26, 245, 195, .55)',
         color: '#000000',
-        id: 3,
+        
         type: "Muffins",
         image: '/assets/images/cakes/Gluten-Free-Jumbo-Cupcakes-3458-2.jpeg',
         products:[ 
@@ -113,7 +113,7 @@ export const AccordionData = [
     {
         bg: 'rgba(26, 245, 195, .7)',
         color: '#000000',
-        id: 4,
+       
         type: "Bread",
         image: '/assets/images/bread.jpeg',
         products:[ 
