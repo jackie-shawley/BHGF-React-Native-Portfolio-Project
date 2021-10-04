@@ -89,10 +89,9 @@ function RenderAccordion(props) {
                               {selectedColor === bg && (
                               <View style={{ marginTop: 10 }}>
                                   {products.map(product => (
-                                    <TouchableOpacity>
+                                    <TouchableOpacity key={product.id}>
                                       <Text
                                         style={styles.text}
-                                        key={id}
                                         onPress={() => 
                                         Alert.alert(
                                           `${product.name}`,
