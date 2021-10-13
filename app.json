@@ -4,11 +4,13 @@
     "slug": "bhgf-react-native",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/square-ruffle-cake.png",    
+    "description": "A React Native app built for a fictional bakery and cafe",
+    "primaryColor": "#1af5c3",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/square-ruffle-cake.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1af5c3"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,8 +23,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/images/square-ruffle-cake.png",
+        "backgroundColor": "#1af5c3"
       }
     },
     "web": {
