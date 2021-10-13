@@ -21,7 +21,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Be Happily Gluten Free Screen Shot](assets/images/screen-shot-home-page.png "BHGF Home Page Screen Shot")
+<!-- ![Be Happily Gluten Free Screen Shot](assets/images/screen-shot-home-page.png assets/images/screen-shot-contact.png "BHGF Home Page Screen Shot") -->
+Home Page             |  Ingredients Page             |  Contact Page
+:-------------------------:|:-------------------------:|:-------------------------:
+![](assets/images/screen-shot-home-page.png)  |  ![](assets/images/screen-shot-ingredients.png)  |  ![](assets/images/screen-shot-contact.png)
+
 
 `jackie-shawley`, `BHGF-React-Native-Portfolio-Project`, `https://www.linkedin.com/in/jackie-kopco-shawley/`, `jackiekopcoshawley@gmail.com`, `Be Happily Gluten Free React Portfolio Project`
 
