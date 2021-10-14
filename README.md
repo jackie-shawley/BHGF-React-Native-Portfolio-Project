@@ -14,6 +14,7 @@
     <br />
     <a href="https://github.com/jackie-shawley/BHGF-React-Native-Portfolio-Project.git"><strong>Explore the docs »</strong></a>
     <br />
+    <a href="https://youtu.be/9VRnwGQkWx8"><strong>View the app</strong></a>
  </p>
 </div>
 
